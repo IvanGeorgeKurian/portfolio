@@ -1,0 +1,85 @@
+.about{
+    width: 100%;
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.about .left{
+    text-align: center;
+    margin: auto;
+    padding: 3rem;
+    max-width: 600px;
+}
+
+.about .left p{
+    margin: 1.2rem 0;
+    text-align: justify;
+}
+
+.about .right {
+    max-width: 600px;
+    flex: 1 1 50%; /* Allows right side to grow and shrink, occupying about 50% on large screens */
+    display: flex; /* Make the right section a flex container */
+    flex-direction: column; /* Stack its content (the img-container) vertically */
+    align-items: center; /* Center the image container horizontally within .right */
+    justify-content: center; /* Center the image container vertically within .right */
+    padding: 1rem; /* Add some padding around the image area */
+}
+
+.right .img-container {
+    /* REMOVE GRID PROPERTIES AND USE FLEXBOX FOR SIMPLE STACKING */
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    align-items: center; /* Center images horizontally within this container */
+    
+    gap: 2rem; /* Add space between the two images */
+    max-width: 70%; /* Control the overall width of the image column */
+    margin: auto; /* Center the img-container itself within .right */
+}
+
+/* Remove specific grid positioning for img-stack elements */
+
+.right .img {
+    max-width: 100%; /* Image will fit within its img-stack container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures margin:auto works if image is smaller than container */
+    border: 1px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Keep the shadow for depth */
+    border-radius: 8px; /* Keep rounded corners */
+}
+
+
+/*cat link styling */
+.paragraph-link {
+    /* Base style */
+    color: #FFD700; /* Gold or a slightly warm yellow - often associated with curiosity/intrigue */
+    text-decoration: none; /* No default underline */
+    font-weight: bold; /* Make it stand out */
+    cursor: pointer; /* Explicitly show it's clickable */
+
+    /* Transition for smooth hover effects */
+    transition: all 0.3s ease-in-out;
+}
+
+.paragraph-link:hover {
+    color: #FFEA00; /* A brighter yellow on hover */
+    text-decoration: underline wavy; /* Wavy underline for a playful, curious look */
+    transform: translateY(-2px); /* Slight lift to indicate interaction */
+}
+
+.paragraph-link:active {
+    transform: translateY(0); /* Return to original position on click */
+}
+
+@media screen and (max-width: 640px) {
+.right .img-container {
+
+    max-width: 80%; /* Control the overall width of the image column */
+   
+}
+
+}

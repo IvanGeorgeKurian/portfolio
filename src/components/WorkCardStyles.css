@@ -1,0 +1,65 @@
+.project-heading{
+    text-align: center;
+    padding: 4rem 0 2rem 0;
+
+}
+
+.project-heading h1{
+    text-align: center;
+    padding: 7rem 0 2rem 0;
+}
+
+.project-container{
+    max-width: 1140px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 40px;
+    padding-bottom: 1rem;
+    align-items: start; /*remove this line if you want the coloums of the project card to have same height  */
+}
+
+.project-card{
+    background: #1a1a1a;
+    padding: 1.2rem 1.2rem;
+    border-radius: 2rem;
+    
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+
+
+
+}
+
+.project-title{
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.pro-details p{
+    padding-bottom: 1rem;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.pro-btns{
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+}
+
+.pro-btns .btn{
+    padding: 0.5rem 1rem;
+}
+@media screen and (max-width: 740px) {
+    .project-container{
+        max-width: 90%;
+        margin: auto;
+        grid-template-columns: 1fr;
+    }
+    
+}
